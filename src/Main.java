@@ -6,7 +6,7 @@ public class Main {
         task2();
         task3();
         task4();
-        //task5();
+        task5();
         //task6();
         //task7();
         //task8();
@@ -17,7 +17,7 @@ public class Main {
         int clientOS = 1;
         if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке ");
-        } else if (clientOS == 1) {
+        } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
@@ -50,30 +50,43 @@ public class Main {
 
     private static void task4() {
 
-        //  int deliveryDistance = 95;
-        //  int day = 1;
-        //  if (deliveryDistance > 20) {
-        //     day = (deliveryDistance / 40) + day;
-        //  }
-        //  System.out.println("Потребуется дней : " + day);   было бы интересно понять как сделать через Math.round но пока не знаю как)
-
-        int day, nextDay, deliveryDistance, interval;
-        day = 1;
-        interval = 40;
-        deliveryDistance = 101;
-        nextDay = deliveryDistance / interval;
-        boolean nextDay1 = (nextDay != 0 && nextDay != 1);
-        if (deliveryDistance < 20) {
-            System.out.println(day);
+        int deliveryDistance = 95;
+        int day = 1;
+        if (deliveryDistance > 20) {
+            day++;
         }
-        if (nextDay1)
-            nextDay = nextDay + 1;
-        else nextDay = nextDay + 2;
-
-        System.out.println(nextDay);
+        if (deliveryDistance > 60) {
+            day++;
+        }
+        System.out.println("Потребуется дней: " + day);
+    }
+    private static void task5() {
+        int month;
+        month = 12;
+        switch (month) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Зима ");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println(" Весна ");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Лето ");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println(" ОСень");
+                break;
+            default:
+                System.out.println("Некоректный месяц ");
+        }
 
     }
 }
-
-
-
